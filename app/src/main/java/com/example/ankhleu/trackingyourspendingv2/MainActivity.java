@@ -1,5 +1,6 @@
 package com.example.ankhleu.trackingyourspendingv2;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        //   getMenuInflater().inflate(R.menu.mymenu,menu); 改此處會變成5個tablet都出現同樣menu
+
         return true;
     }
 
@@ -123,6 +128,28 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
+
+
+
+
+       @Override
+        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+            super.onCreateOptionsMenu(menu, inflater);
+        }
+
+
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+
+            if (item.getItemId()==R.menu.mymenu)
+            {
+      //          Intent it=new Intent(MainActivity.this,) 暫時不寫,等louis寫了之後再串接到新增的activity
+      //           startActivity(it);                      暫時不寫,等louis寫了之後再串接到新增的activity
+            }
+
+            return super.onOptionsItemSelected(item);
+        }
     }
 
     /**
@@ -139,6 +166,12 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+
+            if (position==0)   //此處用position==1，連接到FragmentBill
+            {
+                return FragmentBill.newInstance("Bill","receipt");
+            }
+
             return PlaceholderFragment.newInstance(position + 1);
         }
 

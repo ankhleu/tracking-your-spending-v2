@@ -18,7 +18,7 @@ public class account {
     ArrayList<ArrayList<String>> pay=new ArrayList<ArrayList<String>>();  //pay為有活動的付錢金額代號
 
 
-    int money1;     //有活動的金額value
+    public int money1;     //有活動的金額value
 
 
     String kind;    //類別，為輸入金額的項目分類

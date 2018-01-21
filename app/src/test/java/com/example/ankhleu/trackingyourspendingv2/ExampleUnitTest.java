@@ -34,65 +34,18 @@ public class ExampleUnitTest {
 
     }
 
+/*    @Test
+    public void test_add_data2()throws Exception
+    {
+        accountpayDAO dao=new accountpayDAO();
+        dao.add(new account(20180120,300,"餐飲","",""));
+        dao.add(new account(20180120,100,"飲料","",""));
+        dao.add(new account(20180119,500,"餐飲","",""));
+        assertEquals(500,dao.getList().get(3).money1);
+
+
+    }
+    */
+
 
 }
-
-/*
-
-
-
-@Test
-    public void test_add_data() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        assertEquals(2, dao.getList().size());
-    }
-
-    @Test
-    public void test_add_data2() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        assertEquals(90, dao.getList().get(1).score);
-    }
-    @Test
-    public void test_getStudent() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        assertEquals(90, dao.getStudent(2).score);
-    }
-    @Test
-    public void test_getStudent1() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        assertEquals(null, dao.getStudent(3));
-    }
-    @Test
-    public void test_update() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        dao.update(new Student(2, "Helen", 85));
-        assertEquals(85, dao.getStudent(2).score);
-    }
-    @Test
-    public void test_delete() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        dao.delete(2);
-        assertEquals(1, dao.getList().size());
-    }
-    @Test
-    public void test_delete1() throws Exception {
-        StudentScoreDAO dao = new StudentScoreDAO();
-        dao.add(new Student(1, "Bob", 95));
-        dao.add(new Student(2, "Mary", 90));
-        dao.delete(2);
-        assertEquals(1, dao.getList().get(0).id);
-    }
-
- */
