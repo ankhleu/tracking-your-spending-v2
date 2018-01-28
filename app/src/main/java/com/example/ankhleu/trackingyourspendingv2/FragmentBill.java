@@ -36,6 +36,11 @@ public class FragmentBill extends Fragment {
         // Required empty public constructor
     }
 
+
+    private View view;
+
+
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -70,6 +75,11 @@ public class FragmentBill extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
+
+
+
         return inflater.inflate(R.layout.fragment_fragment_bill, container, false);
     }
 

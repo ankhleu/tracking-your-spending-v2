@@ -12,11 +12,14 @@
         android:orientation="vertical">
 
 
-
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="304dp"
+            android:firstDayOfWeek="2"
+            android:showWeekNumber="false"
+
+            />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
