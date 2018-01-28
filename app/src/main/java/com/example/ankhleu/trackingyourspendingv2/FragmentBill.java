@@ -123,10 +123,7 @@ public class FragmentBill extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void clickmoney(View v)
-    {
-        
-    }
+
 }
 
 
